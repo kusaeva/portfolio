@@ -19,13 +19,11 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = ''
+SECRET_KEY = 'lt48=2tl54)#%9y*5!78i17tntri3zoq))^edc47+xxlepaahl'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True 
 
-ALLOWED_HOSTS = ['kusaeva.beget.tech']
-SESSION_COOKIE_DOMAIN = 'kusaeva.beget.tech'
 
 SITE_ID = 1
 # Application definition
@@ -69,8 +67,6 @@ TEMPLATES = [
         },
     },
 ]
-
-WSGI_APPLICATION = 'HelloDjango.wsgi.application'
 
 
 # Database
