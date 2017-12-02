@@ -1,0 +1,381 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" type="text/css" href="{% static 'portfolio/css/styles.css' %}" />
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body data-spy="scroll">
+  <div class="fluid-container">
+    <!-- ========================== MAIN HEADER =============================-->
+    <header class="main-header" id="home">
+      <!-- Main navigation -->
+      <nav class="main-nav">
+        <h6 class="sr-only">main website navigation</h6>
+        <div class="container clearfix">
+          <div class="nav-logo pull-left">
+            <a href="#home">
+                            <i class="fa fa-camera-retro"></i>Klenkov<span class="main-color text-glowing">photo</span>
+                        </a>
+          </div>
+          <ul class="pull-right">
+            <li><a class="navlink active" href="#home">Главная</a></li>
+            <li><a class="navlink" href="#portfolio">Портфолио</a></li>
+            <li><a class="navlink" href="#about-me">Обо мне</a></li>
+            <li><a class="navlink" href="#contact">Контакты</a></li>
+          </ul>
+          <div class="overlay visible-xs"></div>
+          <div class="hamburger pull-right visible-xs">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </nav>
+      <div class="container">
+        <div class="hero-box">
+          <h3 class="animated fadeInLeft">Imagine</h3>
+          <h2 class="animated fadeInLeft">Discover</h2>
+          <h1 class="animated fadeInLeft">Capture</h1>
+        </div>
+        <a href="#portfolio" class="hero-btn">
+                      <i class="fa fa-arrow-down"></i>
+                  </a>
+        <nav>
+          <h6 class="sr-only">Header social navigation</h6>
+          <ul class="horizontal-nav header-social-nav">
+            <li class="social-btn animated rotateIn">
+              <div class="diamond-frame"></div>
+              <a href="https://vk.com/klenkovphoto" alt="Vk">
+                <i class="fa fa-vk" aria-hidden="true"></i>
+              </a>
+            </li>
+            <li class="social-btn animated rotateIn">
+              <div class="diamond-frame"></div>
+              <a href="http://instagram.com/klenkovphoto" alt="Instagram">
+                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                  </a></li>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- ========================== PORTFOLIO SECTION =============================-->
+    <section class="portfolio" id="portfolio">
+      <div class="container">
+
+        <div class="controls-row clearfix row">
+          <ul class="horizontal-nav">
+            <li class="portfolio-btn" data-multifilter="1">Свадьбы</li>
+            <li class="portfolio-btn" data-multifilter="2">Love story</li>
+            <li class="portfolio-btn" data-multifilter="3">Семья</li>
+            <li class="portfolio-btn" data-multifilter="4">Путешествия</li>
+            <li class="portfolio-btn"><a href="index0.html">Test</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="filtr-container row">
+        <section class="filtr-item" data-category="1">
+          <a href="img/nature1.jpg" class="swipebox">
+                          <img class="filtr-img" alt="pink flowers" src="img/nature1.jpg" />
+                      </a>
+        </section>
+        <section class="filtr-item" data-category="1">
+          <a href="img/nature2.jpg" class="swipebox">
+                          <img class="filtr-img" alt="the sun" src="img/nature2.jpg" />
+                      </a>
+        </section>
+        <section class="filtr-item" data-category="3">
+          <a href="img/animals2.jpg" class="swipebox">
+                          <img class="filtr-img" alt="jedi pug" src="img/animals2.jpg" />
+                      </a>
+        </section>
+        <section class="filtr-item" data-category="1">
+          <a href="img/nature4.jpg" class="swipebox">
+                          <img class="filtr-img" alt="mountainous rainbow" src="img/nature4.jpg" />
+                      </a>
+        </section>
+        <section class="filtr-item" data-category="2">
+          <a href="img/people1.jpg" class="swipebox">
+                          <img class="filtr-img" alt="forest girl" src="img/people1.jpg" />
+                      </a>
+        </section>
+        <section class="filtr-item" data-category="2">
+          <a href="img/people2.jpg" class="swipebox">
+                           <img class="filtr-img" alt="child in leaves" src="img/people2.jpg" />
+                      </a>
+        </section>
+        <section class="filtr-item" data-category="2">
+          <a href="img/people3.jpg" class="swipebox">
+                          <img class="filtr-img" alt="man by the sea" src="img/people3.jpg" />
+                      </a>
+        </section>
+        <section class="filtr-item" data-category="4">
+          <a href="img/underwater2.jpg" class="swipebox">
+                          <img class="filtr-img" alt="underwater jelly" src="img/underwater2.jpg" />
+                      </a>
+        </section>
+        <section class="filtr-item" data-category="3">
+          <a href="img/animals1.jpg" class="swipebox">
+                          <img class="filtr-img" alt="doggies smiling" src="img/animals1.jpg" />
+                      </a>
+        </section>
+        <section class="filtr-item" data-category="1">
+          <a href="img/nature3.jpg" class="swipebox">
+                          <img class="filtr-img" alt="grassy" src="img/nature3.jpg" />
+                      </a>
+        </section>
+        <section class="filtr-item" data-category="3">
+          <a href="img/animals3.jpg" class="swipebox">
+                          <img class="filtr-img" alt="birds flying" src="img/animals3.jpg" />
+                      </a>
+        </section>
+        <section class="filtr-item" data-category="4">
+          <a href="img/underwater4.jpg" class="swipebox">
+                          <img class="filtr-img" alt="quiet sea" src="img/underwater4.jpg" />
+                      </a>
+        </section>
+        <section class="filtr-item" data-category="4">
+          <a href="img/underwater1.jpg" class="swipebox">
+                          <img class="filtr-img" alt="the sun underwater" src="img/underwater1.jpg" />
+                      </a>
+        </section>
+        <section class="filtr-item" data-category="2">
+          <a href="img/people4.jpg" class="swipebox">
+                          <img class="filtr-img" alt="subway farer" src="img/people4.jpg" />
+                      </a>
+        </section>
+        <section class="filtr-item" data-category="4">
+          <a href="img/underwater3.jpg" class="swipebox">
+                          <img class="filtr-img" alt="watery greeting" src="img/underwater3.jpg" />
+                      </a>
+        </section>
+        <section class="filtr-item" data-category="3">
+          <a href="img/animals4.jpg" class="swipebox">
+                          <img class="filtr-img" alt="horse chewing" src="img/animals4.jpg" />
+                      </a>
+        </section>
+      </div>
+    </section>
+
+    <!-- ========================== ETHOS SECTION =============================-->
+    <section class="ethos" id="ethos">
+      <div class="container">
+        <h1 class="underlined sr-only">ethos</h1>
+        <img src="img/oldcamera.png" alt="old camera">
+        <blockquote>
+          Выдающаяся фотография –<br>это глубина чувств, <br> а не глубина резкости <br>
+          <cite>&mdash;Питер Адамс</cite>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- ========================== ABOUT SECTION =============================-->
+    <section class="about-me" id="about-me">
+      <div class="container">
+        <div class="row">
+          <h1 class="underlined">About me</h1>
+        </div>
+        <div class="row">
+          <div class="story-container clearfix">
+            <!-- Your photo goes here -->
+            <img alt="photo of me" src="img/klenkov3.jpg" id="photographer-img">
+            <!-- CV section -->
+            <div class="cv-container col-sm-8">
+              <div class="story-pointer-row row">
+                <!-- Story pointers pointing to different story on click -->
+                <span class="story-pointer active" data-target="story-now">
+                                      <span class="tooltip-time active">2017-сейчас</span>
+                </span>
+                <span class="story-pointer" data-target="story-senior">
+                                      <span class="tooltip-time">2015-2017</span>
+                </span>
+                <span class="story-pointer" data-target="story-junior">
+                                      <span class="tooltip-time">2012-2015</span>
+                </span>
+                <span class="story-pointer" data-target="story-education">
+                                      <span class="tooltip-time">2010-2012</span>
+                </span>
+              </div>
+
+              <!-- Timeline stories -->
+              <div class="story">
+                <article id="story-now">
+                  <h2 class="story-heading animated flipInX">Свободный художник</h2>
+                  <h3 class="time-heading animated fadeIn"><strong>2017 - сейчас</strong></h3>
+                  <p class="story-details animated fadeInUp">В 2017 я решил, что жизнь слишком коротка, чтобы каждый день заниматься нелюбимым делом. Поэтому я вошел в крипту и теперь торгую ночи напролет. А еще я снимаю свадьбы, но только тех людей, что мне нравятся.</p>
+                  <div class="story-image-container animated zoomIn">
+                    <img class="story-image img-responsive" alt="bitcoin" src="img/bitcoin.jpg">
+                  </div>
+                </article>
+              </div>
+              <div class="story">
+                <article id="story-senior">
+                  <h2 class="story-heading animated flipInX">Владелец BMW</h2>
+                  <h3 class="time-heading animated fadeIn"><strong>2015</strong></h3>
+                  <p class="story-details animated fadeInUp">Я провел самый насыщенный свадебный сезон в этом году, и на вырученные деньги купил себе великолепную BMW e34.
+                  </p>
+                  <div class="story-image-container animated zoomIn">
+                    <img class="story-image img-responsive" alt="BMW e34" src="img/bmw.jpg">
+                  </div>
+                </article>
+              </div>
+              <div class="story">
+                <article id="story-junior">
+                  <h2 class="story-heading animated flipInX"><strong>Начинающий фотограф</h2>
+                  <h3 class="time-heading animated fadeIn"><strong>2012</strong></h3>
+                  <p class="story-details animated fadeInUp">Первые коммерческие съемки людей и событий.</p>
+                  <div class="story-image-container animated zoomIn">
+                    <img class="story-image img-responsive" alt="smiling people" src="img/start.jpg">
+                  </div>
+                </article>
+              </div>
+              <div class="story">
+                <article id="story-education">
+                  <h2 class="story-heading animated flipInX">Первый фотоаппарат</h2>
+                  <h3 class="time-heading animated fadeIn"><strong>2010</strong></h3>
+                  <p class="story-details animated fadeInUp">В руки попал мой первый фотоаппарат, снимал всё и всех, и всегда.</p>
+                  <div class="story-image-container animated zoomIn">
+                    <img class="story-image img-responsive" alt="road" src="img/first.jpg">
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================== CONTACT SECTION =============================-->
+    <section class="contact lightblack-section" id="contact">
+      <div class="container">
+        <div class="row">
+          <h1 class="underlined">Контакты</h1>
+        </div>
+        <div class="row">
+          <div class="col-sm-4 text-left contact-details">
+            <div class="row">
+              <div class="col-xs-1">
+                <i class="fa fa-location-arrow"></i>
+              </div>
+              <div class="col-xs-8">
+                г. Орёл
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-1">
+                <i class="fa fa-phone"></i>
+              </div>
+              <div class="col-xs-8">
+                <a class="contact-phone" href="tel:+79192028610">
+                  +7-919-202-86-10
+                </a>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-1">
+                <i class="fa fa-skype"></i>
+              </div>
+              <div class="col-xs-8">
+                klenkov123
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-1">
+                <i class="fa fa-envelope"></i>
+              </div>
+              <div class="col-xs-8">
+                klenkov123@gmail.com
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-8 contact-form">
+            <form method="post" action="#">
+              <div class="row">
+                <input type="text" id="name" name="name" placeholder="Имя" required>
+              </div>
+              <div class="row">
+                <input type="email" id="email" name="email" placeholder="e-mail" required>
+              </div>
+              <div class="row">
+                <textarea name="message" id="message" placeholder="Привет! Хочу обсудить..." rows="7"></textarea>
+              </div>
+              <div class="row">
+                <button class="full-btn" type="submit">Отправить</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================== FOOTER SECTION =============================-->
+    <footer class="main-footer" id="main-footer">
+      <div class="container">
+        <div class="row">
+          <!-- Footer site navigation -->
+          <div class="col-sm-6 clearfix">
+            <nav class="site-footer-nav">
+              <h6 class="sr-only">footer site navigation</h6>
+              <ul class="horizontal-nav">
+                <li>
+                  <a class="main-link" href="#home">Главная</a> &mdash;
+                  <a class="main-link" href="#portfolio">Портфолио</a> &mdash;
+                  <a class="main-link" href="#about-me">Обо мне</a> &mdash;
+                  <a class="main-link" href="#contact">Контакты</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <!-- Footer social navigation -->
+          <div class="col-sm-6 clearfix">
+            <nav class="social-footer-nav">
+              <h6 class="sr-only">footer social navigation</h6>
+              <ul class="horizontal-nav">
+                <li class="social-btn">
+                  <a href="https://vk.com/klenkovphoto" alt="Vk">
+                    <i class="fa fa-vk" aria-hidden="true"></i>
+                  </a>
+                </li>
+                <li class="social-btn">
+                  <a href="http://instagram.com/klenkovphoto" alt="Instagram">
+                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <div class="row">
+          <p>
+            Photocraft is originally developed by <a class="main-link" href="http://yiotis.net" target="_blank">Yiotis Kaltsikis</a> and released under the <a class="main-link" href="https://opensource.org/licenses/MIT" target="_blank">MIT License</a>.
+          </p>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <!-- Scripts -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  <script src="js/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="js/vendor/filterizr/jquery.filterizr.min.js"></script>
+  <script src="js/vendor/waypoints/jquery.waypoints.min.js"></script>
+  <script src="js/vendor/swipebox/jquery.swipebox.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
+
+</html>
