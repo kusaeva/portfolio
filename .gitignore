@@ -2,9 +2,10 @@ HelloDjango/__init__.pyc
 HelloDjango/passenger_wsgi.py
 HelloDjango/passenger_wsgi.pyc
 HelloDjango/settings.pyc
+HelloDjango/settings.py
 HelloDjango/tmp/
 HelloDjango/urls.pyc
 portfolio/__init__.pyc
 portfolio/urls.pyc
 portfolio/views.pyc
-
+secret_key
