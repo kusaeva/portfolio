@@ -10481,8 +10481,7 @@ input, button, textarea, a:focus {
   transform: scaleX(1); }
 
 .main-header {
-  background: url("../img/main2.jpg");
-  background: url("../img/main2.jpg");
+  background: url("../../../media/img/main2.jpg");
   background-position: center;
   background-size: cover;
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);

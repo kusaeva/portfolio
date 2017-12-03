@@ -5,6 +5,7 @@ from .models import HeaderPhoto
 
 
 def index(request):
-    header_photo = HeaderPhoto.objects.filter(is_active=True)[0]
+    header_photos = HeaderPhoto.objects.filter(is_active=True)
+    header_photo = header_photos[0] if header_photos else None
     context = {'header_photo': header_photo}
     return render(request, 'portfolio/index.html', context)

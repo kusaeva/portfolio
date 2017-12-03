@@ -9,3 +9,4 @@ portfolio/__init__.pyc
 portfolio/urls.pyc
 portfolio/views.pyc
 secret_key
+*.pyc
