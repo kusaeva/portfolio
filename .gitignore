@@ -8,5 +8,7 @@ HelloDjango/urls.pyc
 portfolio/__init__.pyc
 portfolio/urls.pyc
 portfolio/views.pyc
+photologue/photos
 secret_key
+static/
 *.pyc
