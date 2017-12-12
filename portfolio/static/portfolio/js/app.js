@@ -50,7 +50,7 @@ $(function() {
         opacity: 1,
         transform: "scale(1)"
       },
-      layout: "sameWidth"
+      layout: "sameSize"
     });
   });
 
