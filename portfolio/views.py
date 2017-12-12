@@ -4,6 +4,7 @@ from django.shortcuts import render
 from .models import HeaderPhoto, Story, Photo
 
 
+
 def index(request):
     header_photos = HeaderPhoto.objects.filter(is_active=True)
     header_photo = header_photos[0] if header_photos else None
@@ -23,11 +24,22 @@ def index(request):
     story.save()
     weddings = [ story, story2, story3, story4]
     lovestories = [ story5, story6, story, story2 ]
+    galleries = Gallery.objects.all()
+
+    weddings = [{'slug': gallery.title, 'cover':gallery.photos.all()[0].get_display_url} for gallery in galleries ]
+    lovestories = weddings
     context = {'header_photo': header_photo, 'weddings': weddings, 'lovestories': lovestories}
     return render(request, 'portfolio/index.html', context)
 
 
+from photologue.models import Gallery
 def gallery(request):
+    galleries = Gallery.objects.all()
+
+    gallery = galleries.get(title="Postoyalko")
+    # photos = [photo.get_display_url() for photo in gallery.photos.all()]
+    # for p in photos:
+    #     print(p)
     context = { 'photos': ['010.jpg',
         '022.jpg',
         '028.jpg',

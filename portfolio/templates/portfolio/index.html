@@ -92,14 +92,14 @@
       <div class="filtr-container row">
         {% for wedding in weddings %}
         <section class="filtr-item" data-category="1">
-          <a href="gallery">
-                        <img class="filtr-img" alt="pink flowers" src="media/series/{{wedding.name}}/{{wedding.cover}}" />
+          <a href="photologue/gallery/{{wedding.slug}}/">
+                        <img class="filtr-img" alt="photo" src="{{wedding.cover}}" />
                     </a>
         </section>
         {% endfor %} {% for x in lovestories %}
         <section class="filtr-item" data-category="2">
-          <a href="gallery">
-                        <img class="filtr-img" alt="pink flowers" src="media/series/{{x.name}}/{{x.cover}}" />
+          <a href="photologue/gallery/{{x.slug}}/">
+                        <img class="filtr-img" alt="photo" src="{{x.cover}}" />
                     </a>
         </section>
         {% endfor %}
@@ -231,6 +231,7 @@
   </div>
   <!-- Scripts -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  <!--script src="{% static 'portfolio/js/vendor/jquery/jquery-3.2.1.min.js' %}"></script-->
   <script src="{% static 'portfolio/js/vendor/imagesloaded/imagesloaded.pkgd.min.js' %}"></script>
   <script src="{% static 'portfolio/js/vendor/filterizr/jquery.filterizr.min.js' %}"></script>
   <script src="{% static 'portfolio/js/vendor/waypoints/jquery.waypoints.min.js' %}"></script>
