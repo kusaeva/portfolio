@@ -26,6 +26,7 @@ from django.core.files.base import ContentFile
 
 from photologue.models import Gallery, Photo
 from photologue.forms import UploadZipForm as UploadZipFormDefault
+from .models import Lovestory, Family, Travel, Portrait
 
 logger = logging.getLogger('photologue.forms')
 
@@ -33,15 +34,33 @@ logger = logging.getLogger('photologue.forms')
 class UploadZipForm(UploadZipFormDefault):
     caption = ''
     description = ''
+    GALLERY = _('GALLERY')
+    LOVESTORY = _('LOVESTORY')
+    FAMILY = _('FAMILY')
+    PORTRAIT = _('PORTRAIT')
+    TRAVEL = _('TRAVEL')
+    GALLERY_TYPE_CHOICES = (
+        (GALLERY, _('Wedding')),
+        (LOVESTORY, _('Lovestory')),
+        (FAMILY, _('Family')),
+        (PORTRAIT, _('Portrait')),
+        (TRAVEL, _('Travel')),
+    )
+
+    gallery_type = forms.ChoiceField(
+        choices=GALLERY_TYPE_CHOICES,
+    )
 
     def save(self, request=None, zip_file=None):
+        print(self.cleaned_data['gallery_type'])
+
         if not zip_file:
             zip_file = self.cleaned_data['zip_file']
-	encoded = zip_file._name.encode()
-        zipname = encoded.split('.')[0]
-        zip = zipfile.ZipFile(zip_file)
-        count = 1
-        current_site = Site.objects.get(id=settings.SITE_ID)
+            encoded = zip_file._name.encode('utf-8').decode()
+            zipname = encoded.split('.')[0]
+            zip = zipfile.ZipFile(zip_file)
+            count = 1
+            current_site = Site.objects.get(id=settings.SITE_ID)
         if self.cleaned_data['gallery']:
             logger.debug('Using pre-existing gallery.')
             gallery = self.cleaned_data['gallery']
@@ -49,7 +68,14 @@ class UploadZipForm(UploadZipFormDefault):
             logger.debug(
                 force_text('Creating new gallery "{0}".')
                 .format(self.cleaned_data['title']))
-            gallery = Gallery.objects.create(
+            gallery_type_cls = {
+                'GALLERY': Gallery,
+                'LOVESTORY': Lovestory,
+                'FAMILY': Family,
+                'PORTRAIT': Portrait,
+                'TRAVEL': Travel,
+            }
+            gallery = gallery_type_cls[self.cleaned_data['gallery_type']].objects.create(
                 title=self.cleaned_data['title'],
                 slug=slugify(self.cleaned_data['title']),
                 description=self.cleaned_data['description'],
