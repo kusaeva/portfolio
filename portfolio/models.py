@@ -3,6 +3,10 @@ from __future__ import unicode_literals
 from photologue.models import Gallery as GalleryDefault
 
 
+class Wedding(GalleryDefault):
+    pass
+
+
 class Lovestory(GalleryDefault):
     pass
 

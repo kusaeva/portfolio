@@ -13,7 +13,7 @@ from photologue.admin import GalleryAdmin as GalleryAdminDefault
 
 from .forms import UploadZipForm
 from photologue.models import Gallery, Photo
-from .models import Lovestory, Family, Portrait, Travel
+from .models import Wedding, Lovestory, Family, Portrait, Travel
 
 
 class PhotoAdminForm(forms.ModelForm):
@@ -22,14 +22,14 @@ class PhotoAdminForm(forms.ModelForm):
         exclude = ('sites', 'caption', 'description',)
 
 
-class GalleryAdminForm(forms.ModelForm):
+class WeddingAdminForm(forms.ModelForm):
     class Meta:
-        model = Gallery
+        model = Wedding
         exclude = ('sites', 'description', 'date_added',)
 
 
-class GalleryAdmin(GalleryAdminDefault):
-    form = GalleryAdminForm
+class WeddingAdmin(GalleryAdminDefault):
+    form = WeddingAdminForm
 
 
 class LovestoryAdminForm(forms.ModelForm):
@@ -108,8 +108,8 @@ admin.site.unregister(PhotoEffect)
 admin.site.unregister(Watermark)
 
 admin.site.register(Photo, PhotoAdmin)
-admin.site.register(Gallery, GalleryAdmin)
+admin.site.register(Wedding, WeddingAdmin)
 admin.site.register(Lovestory, LovestoryAdmin)
-admin.site.register(Family, GalleryAdmin)
-admin.site.register(Travel, GalleryAdmin)
-admin.site.register(Portrait, GalleryAdmin)
+admin.site.register(Family, FamilyAdmin)
+admin.site.register(Travel, TravelAdmin)
+admin.site.register(Portrait, PortraitAdmin)

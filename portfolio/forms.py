@@ -26,7 +26,7 @@ from django.core.files.base import ContentFile
 
 from photologue.models import Gallery, Photo
 from photologue.forms import UploadZipForm as UploadZipFormDefault
-from .models import Lovestory, Family, Travel, Portrait
+from .models import Wedding, Lovestory, Family, Travel, Portrait
 
 logger = logging.getLogger('photologue.forms')
 
@@ -34,13 +34,13 @@ logger = logging.getLogger('photologue.forms')
 class UploadZipForm(UploadZipFormDefault):
     caption = ''
     description = ''
-    GALLERY = _('GALLERY')
+    WEDDING = _('WEDDING')
     LOVESTORY = _('LOVESTORY')
     FAMILY = _('FAMILY')
     PORTRAIT = _('PORTRAIT')
     TRAVEL = _('TRAVEL')
     GALLERY_TYPE_CHOICES = (
-        (GALLERY, _('Wedding')),
+        (WEDDING, _('Wedding')),
         (LOVESTORY, _('Lovestory')),
         (FAMILY, _('Family')),
         (PORTRAIT, _('Portrait')),
@@ -69,7 +69,7 @@ class UploadZipForm(UploadZipFormDefault):
                 force_text('Creating new gallery "{0}".')
                 .format(self.cleaned_data['title']))
             gallery_type_cls = {
-                'GALLERY': Gallery,
+                'WEDDING': Wedding,
                 'LOVESTORY': Lovestory,
                 'FAMILY': Family,
                 'PORTRAIT': Portrait,
