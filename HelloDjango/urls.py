@@ -8,7 +8,6 @@ from portfolio import views
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', views.index, name='index'),
-    url(r'^gallery', views.gallery, name='gallery'),
     url(r'^photologue/', include('photologue.urls', namespace='photologue')),
 ]
 

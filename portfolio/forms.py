@@ -37,7 +37,8 @@ class UploadZipForm(UploadZipFormDefault):
     def save(self, request=None, zip_file=None):
         if not zip_file:
             zip_file = self.cleaned_data['zip_file']
-        zipname = str.split(zip_file._name, '.')[0]
+	encoded = zip_file._name.encode()
+        zipname = encoded.split('.')[0]
         zip = zipfile.ZipFile(zip_file)
         count = 1
         current_site = Site.objects.get(id=settings.SITE_ID)

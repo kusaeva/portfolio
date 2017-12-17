@@ -24,6 +24,8 @@ $(function() {
     $(".hamburger").toggleClass("open");
     $(".main-nav ul").toggleClass("open");
     $(".main-nav ul li").toggleClass("open");
+    $(".gallery-nav ul").toggleClass("open");
+    $(".gallery-nav ul li").toggleClass("open");
     $(".overlay").toggleClass("open");
   }
 
@@ -57,10 +59,8 @@ $(function() {
   /*******************************
     *           ABOUT ME
     ********************************/
-  $(".cv-container").imagesLoaded(function() {
-    /**
-        * (Re)arranges the story pointer buttons in the timeline responsively
-        */
+  /*$(".cv-container").imagesLoaded(function() {
+    // (Re)arranges the story pointer buttons in the timeline responsively
     function setupTimelineControls() {
       var onMobile = $(window).width() < 751,
         distance = 100 / $(".story-pointer").size(),
@@ -109,7 +109,7 @@ $(function() {
       }
     });
   });
-
+*/
   /*******************************
     *           MISC
     ********************************/

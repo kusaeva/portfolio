@@ -109,7 +109,7 @@ admin.site.unregister(Watermark)
 
 admin.site.register(Photo, PhotoAdmin)
 admin.site.register(Gallery, GalleryAdmin)
-admin.site.register(Lovestory, GalleryAdmin)
+admin.site.register(Lovestory, LovestoryAdmin)
 admin.site.register(Family, GalleryAdmin)
 admin.site.register(Travel, GalleryAdmin)
 admin.site.register(Portrait, GalleryAdmin)

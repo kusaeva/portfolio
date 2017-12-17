@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title></title>
+  <title>Свадебный фотограф Дмитрий Кленков</title>
 
   <!-- Bootstrap -->
   <link rel="stylesheet" type="text/css" href="{% static 'portfolio/css/styles.css' %}" />
@@ -85,18 +85,37 @@
             <li class="portfolio-btn" data-filter="1">Свадьбы</li>
             <li class="portfolio-btn" data-filter="2">Love story</li>
             <li class="portfolio-btn" data-filter="3">Семья</li>
-            <li class="portfolio-btn" data-filter="4">Путешествия</li>
+            <li class="portfolio-btn" data-filter="4">Портрет</li>
+            <li class="portfolio-btn" data-filter="5">Путешествия</li>
           </ul>
         </div>
       </div>
       <div class="filtr-container row">
-        {% for wedding in weddings %}
+        {% for x in weddings %}
         <section class="filtr-item" data-category="1">
-          <a href="photologue/gallery/{{wedding.slug}}/">
-                        <img class="filtr-img" alt="photo" src="{{wedding.cover}}" />
+          <a href="photologue/gallery/{{x.slug}}/">
+                        <img class="filtr-img" alt="photo" src="{{x.cover}}" />
                     </a>
         </section>
         {% endfor %} {% for x in lovestories %}
+        <section class="filtr-item filteredOut" data-category="2">
+          <a href="photologue/gallery/{{x.slug}}/">
+                        <img class="filtr-img" alt="photo" src="{{x.cover}}" />
+                    </a>
+        </section>
+        {% endfor %} {% for x in families%}
+        <section class="filtr-item filteredOut" data-category="2">
+          <a href="photologue/gallery/{{x.slug}}/">
+                        <img class="filtr-img" alt="photo" src="{{x.cover}}" />
+                    </a>
+        </section>
+        {% endfor %} {% for x in portraits %}
+        <section class="filtr-item filteredOut" data-category="2">
+          <a href="photologue/gallery/{{x.slug}}/">
+                        <img class="filtr-img" alt="photo" src="{{x.cover}}" />
+                    </a>
+        </section>
+        {% endfor %} {% for x in travel %}
         <section class="filtr-item filteredOut" data-category="2">
           <a href="photologue/gallery/{{x.slug}}/">
                         <img class="filtr-img" alt="photo" src="{{x.cover}}" />
@@ -107,7 +126,7 @@
     </section>
 
     <!-- ========================== ETHOS SECTION =============================-->
-    <section class="ethos" id="ethos">
+  <!--  <section class="ethos" id="ethos">
       <div class="container">
         <h1 class="underlined sr-only">ethos</h1>
         <img src="media/img/oldcamera.png" alt="old camera">
@@ -117,7 +136,7 @@
         </blockquote>
       </div>
     </section>
-
+	-->
     <!-- ========================== ABOUT SECTION =============================-->
 
 

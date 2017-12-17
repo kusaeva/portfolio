@@ -15214,7 +15214,7 @@ a:focus {
 }
 
 .main-header {
-  background: url("../../../media/img/main2.jpg");
+  background: url("../../../media/img/header.jpg");
   background-position: center;
   background-size: cover;
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
@@ -15418,6 +15418,12 @@ a:focus {
   overflow: hidden;
   width: 25.1%;
 }
+@media (max-width: 768px) {
+ .portfolio .filtr-item {
+   overflow: hidden;
+   width: 50.2%;
+ }
+}
 .portfolio .filtr-item .filtr-img {
   display: block;
   width: 100%;
@@ -15486,10 +15492,8 @@ a:focus {
 }
 
 .ethos {
-  background: -webkit-linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.25)),
-    url("../../img/ethosbg.jpg");
   background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.25)),
-    url("../../img/ethosbg.jpg");
+    url("../../../media/img/ethosbg.jpg");
   background-position: center;
   background-size: cover;
   color: white;
